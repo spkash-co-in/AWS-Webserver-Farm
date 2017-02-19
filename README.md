@@ -189,6 +189,51 @@ Adds IIS Windows service and invokes cfn-init
 Uses yum to install aws-cfn-bootstrap and init
 
 
+# Running on AWS
+The template now ready may be run on the CloudFormation AWS console but just uploading the JSON file. A snapshot of one of the runs and a stack created from this template is below. 
+
+![instances](https://github.com/spkash-co-in/AWS-Webserver-Farm/blob/master/instances.JPG)
+
+
+It has the following features. Linux and Windows servers are started on different AZ thus providing a HA environment where traffic is catered to even when any of the data-centers or AZ is down.
+
+
+### Linux Servers ap-southeast-1a
+
+### Linux Server 1
+* Instance ID i-0e73ee95465615208
+* Public DNS ec2-52-221-247-170.ap-southeast-1.compute.amazonaws.com
+* Public IP 52.221.247.170
+* Availability zone ap-southeast-1a
+
+### Linux Server 2
+* Instance ID i-0a93db83d5bee7fed
+* Public DNS ec2-52-77-216-88.ap-southeast-1.compute.amazonaws.com
+* Public IP 52.77.216.88
+* Availability zone ap-southeast-1a
+
+### Windows Servers ap-southeast-1b
+
+### Windows Server 1
+* Instance ID i-01c46451b83bfddcb
+* Public DNS ec2-52-77-219-96.ap-southeast-1.compute.amazonaws.com
+* Public IP 52.77.219.96
+* Availability zone ap-southeast-1b
+
+### Windows Server 2
+* Instance ID i-02cfeb21cc2604f12
+* Public DNS ec2-54-169-179-242.ap-southeast-1.compute.amazonaws.com
+* Public IP 54.169.179.242
+* Availability zone ap-southeast-1b
+
+
+### ELB
+One ELB manages both the linux and windows servers.
+
+The public URL to the web page via the ELB
+
+`http://elb-121503496.ap-southeast-1.elb.amazonaws.com/`
+
 # List of AWS services used
 
     * EC2
