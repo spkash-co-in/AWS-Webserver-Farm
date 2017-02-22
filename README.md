@@ -11,6 +11,8 @@ Starting with enabling users to version their architecture defining Infrastructu
 Now we try to acheive the objective of this post by using a CloudFormation template.
 We will go through the building blocks of the architecture and understand the pieces that help achieve our objective.
 
+![Hi level Infra](https://github.com/spkash-co-in/AWS-Webserver-Farm/blob/master/hilevelinfra.JPG)
+
 # Level One 
 At the highest level one will find the following elements make up the CloudFormation template
 This is the snapshot of the template at the highest level.
